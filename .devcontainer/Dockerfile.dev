@@ -1,0 +1,9 @@
+FROM recipe-api_app
+LABEL MAINTAINER Angelo Moreira
+
+USER root
+
+RUN apk add --no-cache --virtual .build-deps gcc musl-dev 
+RUN pip install cython 
+RUN pip install -U pylint 
+RUN pip install -U autopep8
